@@ -18,4 +18,6 @@ namespace Full_GRASP_And_SOLID.Library
 
         public double UnitCost { get; set; }
     }
+
+    
 }

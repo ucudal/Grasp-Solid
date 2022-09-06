@@ -34,5 +34,24 @@ namespace Full_GRASP_And_SOLID.Library
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
             }
         }
+
+        public double GetProductionCost(){
+            double costoInsumos = 0;
+            double costoEquipment = 0;
+
+            foreach (Step step in this.steps)
+            {
+                costoInsumos += step.Quantity;
+                costoEquipment += step.Equipment.HourlyCost * step.Time;
+                
+            }
+
+            return costoInsumos + costoEquipment;
+
+        }
+
     }
 }
+
+/*Patrón: Expert
+Principio: SRP*/
